@@ -6,7 +6,7 @@ pipeline {
     containerId = sh(script: 'docker ps -aqf "name=node-app"', returnStdout: true)
   }
   agent any
-  tools {nodejs "node" }
+  tools {nodejs "nodejs" }
   stages {
     stage('Build') {
        steps {
