@@ -1,7 +1,7 @@
 pipeline {
   environment {
     registry = "eaingaran/node-todo-frontend"
-    registryCredential = 'github'
+    registryCredential = 'credentials'
     dockerImage = ''
     containerId = sh(script: 'docker ps -aqf "name=node-app"', returnStdout: true)
   }
