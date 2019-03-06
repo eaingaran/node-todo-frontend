@@ -45,7 +45,7 @@ pipeline {
     }
     stage('Run Container') {
       steps {
-        sh 'docker run --name=node-app -d -p 9000:9000 $registry:$BUILD_NUMBER &'
+        sh 'docker run --name=node-app -d -p 3000:3000 $registry:$BUILD_NUMBER &'
       }
     }
     stage('Remove Unused docker image') {
